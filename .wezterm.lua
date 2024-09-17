@@ -18,7 +18,7 @@ config.colors = {
 	tab_bar = {
 		background = "#2a283e",
 		active_tab = {
-			bg_color = "#f6c177",
+			bg_color = "#d7827e",
 			fg_color = "#1e1e2e",
 		},
 		inactive_tab = {
