@@ -18,7 +18,7 @@ config.colors = {
 	tab_bar = {
 		background = "#2a283e",
 		active_tab = {
-			bg_color = "#d7827e",
+			bg_color = "#94e2d5",
 			fg_color = "#1e1e2e",
 		},
 		inactive_tab = {
@@ -33,9 +33,9 @@ config.colors = {
 	},
 }
 
-config.color_scheme = "rose-pine-moon"
+--config.color_scheme = "rose-pine-moon"
 -- config.color_scheme = "rose-pine"
--- config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = "Catppuccin Mocha"
 config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
 	{
