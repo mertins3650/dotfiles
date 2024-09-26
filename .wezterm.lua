@@ -7,7 +7,7 @@ if wezterm.config_builder then
 end
 
 config.window_decorations = "RESIZE"
-config.font_size = 16
+config.font_size = 24
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
