@@ -109,9 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-# eza
-export FPATH="<path_to_eza>/completions/zsh:$FPATH"
-alias ls="eza"
 # zoxide
 alias cd="z"
 eval "$(zoxide init zsh)"
@@ -193,6 +190,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# eza
+export FPATH="<path_to_eza>/completions/zsh:$FPATH"
+alias ls="eza -1 --icons"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
