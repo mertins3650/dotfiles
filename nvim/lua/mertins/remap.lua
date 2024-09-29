@@ -13,9 +13,4 @@ vim.keymap.set({ "n", "v" }, "<leader>P", '"+p', { desc = "Paste from clipboard"
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without replace" })
-
-vim.keymap.set("n", "<C-H>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-L>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-J>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-K>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.api.nvim_create_user_command("Clrm", "delmarks a-zA-Z0-9", {})
