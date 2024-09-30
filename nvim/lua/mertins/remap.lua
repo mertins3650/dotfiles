@@ -14,3 +14,9 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" 
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without replace" })
 vim.api.nvim_create_user_command("Clrm", "delmarks a-zA-Z0-9", {})
+
+-- helper
+vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
