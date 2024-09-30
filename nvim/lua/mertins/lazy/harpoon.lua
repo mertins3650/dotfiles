@@ -8,12 +8,12 @@ local local_plugins = {
 
 			harpoon:setup()
 
-			vim.keymap.set("n", "<leader>a", function()
+			vim.keymap.set("n", "<leader>ha", function()
 				harpoon:list():add()
-			end, { desc = "Append harpoon" })
-			vim.keymap.set("n", "<C-e>", function()
+			end, { desc = "[H]arpoon [A]ppend" })
+			vim.keymap.set("n", "<leader>ho", function()
 				harpoon.ui:toggle_quick_menu(harpoon:list())
-			end)
+			end, { desc = "[H]arpoon [O]verview" })
 
 			vim.keymap.set("n", "<C-h>", function()
 				harpoon:list():select(1)
@@ -27,18 +27,18 @@ local local_plugins = {
 			vim.keymap.set("n", "<C-l>", function()
 				harpoon:list():select(4)
 			end)
-			vim.keymap.set("n", "<leader><C-h>", function()
+			vim.keymap.set("n", "<leader>rh", function()
 				harpoon:list():replace_at(1)
-			end)
-			vim.keymap.set("n", "<leader><C-j>", function()
+			end, { desc = "harpoon [R]replace [H]" })
+			vim.keymap.set("n", "<leader>rj", function()
 				harpoon:list():replace_at(2)
-			end)
-			vim.keymap.set("n", "<leader><C-k>", function()
+			end, { desc = "harpoon [R]replace [J]" })
+			vim.keymap.set("n", "<leader>rk", function()
 				harpoon:list():replace_at(3)
-			end)
-			vim.keymap.set("n", "<leader><C-l>", function()
+			end, { desc = "harpoon [R]replace [K]" })
+			vim.keymap.set("n", "<leader>rl", function()
 				harpoon:list():replace_at(4)
-			end)
+			end, { desc = "harpoon [R]replace [L]" })
 		end,
 	},
 }
