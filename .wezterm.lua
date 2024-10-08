@@ -3,39 +3,39 @@ local wezterm = require("wezterm")
 local config = {}
 
 if wezterm.config_builder then
-  config = wezterm.config_builder()
+	config = wezterm.config_builder()
 end
 
 config.window_decorations = "RESIZE"
-config.font_size = 24
+config.font_size = 16
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 config.enable_wayland = true
 
 config.colors = {
-  tab_bar = {
-    active_tab = {
-      bg_color = "#94e2d5",
-      fg_color = "#1e1e2e",
-    },
-    inactive_tab = {
-      bg_color = "#2a273f",
-      fg_color = "#908caa",
-    },
-    inactive_tab_hover = {
-      bg_color = "#2a273f",
-      fg_color = "#908caa",
-      italic = false,
-    },
-  },
+	tab_bar = {
+		active_tab = {
+			bg_color = "#94e2d5",
+			fg_color = "#1e1e2e",
+		},
+		inactive_tab = {
+			bg_color = "#2a273f",
+			fg_color = "#908caa",
+		},
+		inactive_tab_hover = {
+			bg_color = "#2a273f",
+			fg_color = "#908caa",
+			italic = false,
+		},
+	},
 }
 
 -- config.color_scheme = "rose-pine-moon"
-config.color_scheme = "rose-pine"
--- config.color_scheme = "Catppuccin Mocha"
--- config.hide_tab_bar_if_only_one_tab = false
-config.hide_tab_bar_if_only_one_tab = true
+-- config.color_scheme = "rose-pine"
+config.color_scheme = "Rosé Pine (base16)"
+--config.color_scheme = "Catppuccin Macchiato"
+config.hide_tab_bar_if_only_one_tab = false
 -- config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 2000 }
 -- config.keys = {
 --   {

@@ -194,7 +194,7 @@ source $ZSH/oh-my-zsh.sh
 
 # eza
 export FPATH="<path_to_eza>/completions/zsh:$FPATH"
-alias ls="eza -1 --icons"
+alias ls="eza -1 --group-directories-first --icons"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
