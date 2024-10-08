@@ -1,0 +1,14 @@
+theme "catppuccin";
+//theme "rose-pine"
+
+default_layout "compact";
+
+on_force_close "quit";
+
+keybinds {
+    unbind "Ctrl h" // used for ctrl+backspace by alacritty
+    unbind "Ctrl n" // remove Ctrl+N keybind
+    normal {
+        unbind "Ctrl n"
+    }
+}
