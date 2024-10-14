@@ -29,16 +29,16 @@ local local_plugins = {
 			end)
 			vim.keymap.set("n", "<leader>rh", function()
 				harpoon:list():replace_at(1)
-			end, { desc = "harpoon [R]replace [H]" })
+			end, { desc = "harpoon replace [H]" })
 			vim.keymap.set("n", "<leader>rj", function()
 				harpoon:list():replace_at(2)
-			end, { desc = "harpoon [R]replace [J]" })
+			end, { desc = "harpoon replace [J]" })
 			vim.keymap.set("n", "<leader>rk", function()
 				harpoon:list():replace_at(3)
-			end, { desc = "harpoon [R]replace [K]" })
+			end, { desc = "harpoon replace [K]" })
 			vim.keymap.set("n", "<leader>rl", function()
 				harpoon:list():replace_at(4)
-			end, { desc = "harpoon [R]replace [L]" })
+			end, { desc = "harpoon replace [L]" })
 		end,
 	},
 }
