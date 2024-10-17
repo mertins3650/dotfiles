@@ -1,14 +1,24 @@
-theme "catppuccin";
-//theme "rose-pine"
-
-default_layout "compact";
-
-on_force_close "quit";
+theme "catppuccin"
+default_layout "compact"
+on_force_close "quit"
+pane_frames: false
 
 keybinds {
-    unbind "Ctrl h" // used for ctrl+backspace by alacritty
-    unbind "Ctrl n" // remove Ctrl+N keybind
+    unbind "Ctrl h" // unbind in all modes
+    unbind "Ctrl j" // unbind in all modes
+    unbind "Ctrl k" // unbind in all modes
+    unbind "Ctrl l" // unbind in all modes
     normal {
-        unbind "Ctrl n"
+        unbind "Alt h" "Alt j" "Alt k" "Alt l" 
     }
+tmux {
+    bind "g" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-sessionizer.wasm" {
+            floating true
+            move_to_focused_tab true
+            cwd "/"
+            root_dirs "/home/simon-mertins/workspace/github.com/mertins3650/;//home/simon-mertins/workspace/github.com/;home/simon-mertins/workspace/"
+            session_layout ":compact"
+        }; SwitchToMode "Locked";
+    }
+}
 }

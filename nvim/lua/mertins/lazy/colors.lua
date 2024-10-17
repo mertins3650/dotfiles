@@ -21,7 +21,7 @@ return {
 		priority = 1000,
 		init = function()
 			require("catppuccin").setup({
-				flavour = "macchiato",
+				flavour = "mocha",
 				no_italics = false,
 				styles = {
 					conditionals = {},

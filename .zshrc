@@ -192,6 +192,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias sessionizer="bash /home/simonmertins/.local/bin/zellij-sessionizer"
 
 # eza
 export FPATH="<path_to_eza>/completions/zsh:$FPATH"
