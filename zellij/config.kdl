@@ -10,13 +10,16 @@ keybinds {
     unbind "Ctrl l" // unbind in all modes
     unbind "Ctrl n" // unbind in all modes
     unbind "Ctrl a" 
+    unbind "Ctrl g" 
     normal {
         unbind "Ctrl p" 
+        unbind "Ctrl g" 
         unbind "Ctrl n" 
         bind "Ctrl a" { SwitchToMode "pane"; }
         unbind "Alt h" "Alt j" "Alt k" "Alt l" 
     }
-    tmux {
+    session {
+        unbind "Ctrl p" 
         bind "g" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-sessionizer.wasm" {
                 floating true
                 move_to_focused_tab true
