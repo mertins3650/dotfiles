@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "catppuccin"
+	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -9,6 +9,7 @@ end
 return {
 	{
 		"folke/tokyonight.nvim",
+		name = "tokyonight",
 		lazy = false,
 		opts = {},
 		config = function()
@@ -27,7 +28,6 @@ return {
 					conditionals = {},
 				},
 			})
-			--vim.cmd("colorscheme catppuccin")
 		end,
 	},
 	{
@@ -41,18 +41,17 @@ return {
 					italic = false,
 				},
 			})
-			-- vim.cmd("colorscheme rose-pine")
 		end,
 	},
 	{
 		"vague2k/vague.nvim",
+		name = "vague",
 		config = function()
 			require("vague").setup({
 				style = {
 					strings = "none",
 				},
 			})
-			-- vim.cmd("colorscheme vague")
 		end,
 	},
 }

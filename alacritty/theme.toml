@@ -1,75 +1,71 @@
 [colors.primary]
-background = "#24273a"
-foreground = "#cad3f5"
-dim_foreground = "#8087a2"
-bright_foreground = "#cad3f5"
+foreground = "#e0def4"
+background = "#191724"
+dim_foreground = "#908caa"
+bright_foreground = "#e0def4"
 
 [colors.cursor]
-text = "#24273a"
-cursor = "#f4dbd6"
+text = "#e0def4"
+cursor = "#524f67"
 
 [colors.vi_mode_cursor]
-text = "#24273a"
-cursor = "#b7bdf8"
+text = "#e0def4"
+cursor = "#524f67"
 
 [colors.search.matches]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#908caa"
+background = "#26233a"
 
 [colors.search.focused_match]
-foreground = "#24273a"
-background = "#a6da95"
-
-[colors.footer_bar]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#191724"
+background = "#ebbcba"
 
 [colors.hints.start]
-foreground = "#24273a"
-background = "#eed49f"
+foreground = "#908caa"
+background = "#1f1d2e"
 
 [colors.hints.end]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#6e6a86"
+background = "#1f1d2e"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#e0def4"
+background = "#1f1d2e"
 
 [colors.selection]
-text = "#24273a"
-background = "#f4dbd6"
+text = "#e0def4"
+background = "#403d52"
 
 [colors.normal]
-black = "#494d64"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#b8c0e0"
+black = "#26233a"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
 
 [colors.bright]
-black = "#5b6078"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#a5adcb"
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
 
 [colors.dim]
-black = "#494d64"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#b8c0e0"
-
-[[colors.indexed_colors]]
-index = 16
-color = "#f5a97f"
-
-[[colors.indexed_colors]]
-index = 17
-color = "#f4dbd6"
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
