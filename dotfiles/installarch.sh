@@ -4,28 +4,26 @@ sudo pacman -Syu --noconfirm docker
 sudo pacman -Syu --noconfirm waybar 
 sudo pacman -Syu --noconfirm hyprlock 
 sudo pacman -Syu --noconfirm neovim 
-sudo pacman -Syu --noconfirm firefox 
 sudo pacman -Syu --noconfirm ripgrep 
 sudo pacman -Syu --noconfirm fzf
 sudo pacman -Syu --noconfirm lazygit 
 sudo pacman -Syu --noconfirm eza 
 sudo pacman -Syu --noconfirm zoxide 
-sudo pacman -Syu --noconfirm stow 
+sudo pacman -Syu --noconfirm yazi
 sudo pacman -Syu --noconfirm ttf-cascadia-code-nerd 
-sudo pacman -Syu --noconfirm wofi 
-sudo pacman -Syu --noconfirm npm 
-sudo pacman -Syu --noconfirm nodejs 
-sudo pacman -Syu --noconfirm github-cli 
 sudo pacman -Syu --noconfirm lua 
 sudo pacman -Syu --noconfirm luarocks 
 sudo pacman -Syu --noconfirm python 
 sudo pacman -Syu --noconfirm python-pip
+sudo pacman -Syu --noconfirm npm 
+sudo pacman -Syu --noconfirm nodejs 
+sudo pacman -Syu --noconfirm github-cli 
 sudo pacman -Syu --noconfirm swaync
 sudo pacman -Syu --noconfirm libnotify
 sudo pacman -Syu --noconfirm hypridle
 sudo pacman -Syu --noconfirm hyprpaper
-sudo pacman -Syu --noconfirm yazi
 sudo pacman -Syu --noconfirm fuzzel
+sudo pacman -Syu --noconfirm stow 
 
 
 sudo systemctl enable docker.service
@@ -80,5 +78,6 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 yay -S lazydocker
 yay -S hyprshot
+yay -S zen-browser-bin
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
