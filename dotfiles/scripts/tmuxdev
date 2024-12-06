@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SESSION_NAME=$(basename "$PWD")
+
+if [ -n "$TMUX" ]; then
+    tmux new-window
+    tmux new-window
+    tmux send-keys -t 1 "bun run dev" C-m
+else
+    tmux new-session -d -s "$SESSION_NAME"
+    tmux new-window
+    tmux send-keys -t "$SESSION_NAME:1" "bun run dev" C-m
+    tmux attach-session -t "$SESSION_NAME"
+fi
+
