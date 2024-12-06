@@ -1,4 +1,3 @@
-
 sudo pacman -Syu --noconfirm ripgrep 
 sudo pacman -Syu --noconfirm fzf
 sudo pacman -Syu --noconfirm lazygit 
