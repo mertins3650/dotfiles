@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
+rm -rf ~/.config/kitty
+ln -s $HOME/dotfiles/kitty/ $HOME/.config/kitty
