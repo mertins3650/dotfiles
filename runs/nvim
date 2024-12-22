@@ -23,4 +23,4 @@ sudo make -C ~/neovim install
 
 rm -rf ~/.config/nvim
 
-ln -s $HOME/dotfiles/nvim/ $HOME/.config/nvim
+ln -s $HOME/dev/dotfiles/nvim/ $HOME/.config/nvim
