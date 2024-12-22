@@ -1,1 +1,2 @@
+#!/usr/bin/ basah
 cargo install --locked yazi-fm yazi-cli
