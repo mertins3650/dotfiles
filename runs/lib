@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 
 sudo apt -y update
-sudo apt -y install git ripgrep xclip jq tldr shutter python3-pip eza
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-
-git clone git@github.com:junegunn/fzf.git $HOME/personal/fzf
-$HOME/personal/fzf/install
+sudo apt -y install git ripgrep xclip jq tldr shutter python3-pip eza fzf

@@ -1,4 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:$HOME/.local/kitty.app/bin
 
 ZSH_THEME="robbyrussell"
 
