@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 
 sudo apt -y install fuzzel
-
-rm -rf ~/.config/fuzzel/fuzzel.ini
-mkdir -p ~/.config
-ln -s $HOME/dev/dotfiles/fuzzel/fuzzel.ini $HOME/.config/fuzzel/fuzzel.ini
