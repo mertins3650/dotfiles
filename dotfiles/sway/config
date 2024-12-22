@@ -55,6 +55,8 @@ output * bg /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png fil
 # resumed. It will also lock your screen before your computer goes to sleep.
 bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
 bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
+bindsym $mod+Mod1+l exec swaylock
+
 
 ### Input configuration
 #
@@ -78,7 +80,7 @@ default_border pixel 4
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
