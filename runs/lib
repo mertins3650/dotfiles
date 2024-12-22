@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 sudo apt -y update
-sudo apt -y install ripgrep xclip jq tldr shutter python3-pip eza fzf
+sudo apt -y install ripgrep xclip jq tldr shutter python3-pip eza fzf wget curl
