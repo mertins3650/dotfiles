@@ -2,5 +2,5 @@
 
 sudo apt -y install fuzzel
 
-rm -rf ~/.config/fuzzel.ini
-ln -s $HOME/dotfiles/fuzzel/fuzzel.ini $HOME/.config/fuzzel.ini
+rm -rf ~/.config/fuzzel/fuzzel.ini
+ln -s $HOME/dotfiles/fuzzel/fuzzel.ini $HOME/.config/fuzzel/fuzzel.ini
