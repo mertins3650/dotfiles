@@ -2,3 +2,4 @@
 
 sudo apt -y update
 sudo apt -y install ripgrep pavucontrol xclip jq tldr shutter python3-pip eza fzf wget curl
+sudo apt -y install python3-i3ipc
