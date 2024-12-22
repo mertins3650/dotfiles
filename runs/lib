@@ -1,4 +1,4 @@
-#!/usr/bin/ bash
+#!/usr/bin/env bash
 
 sudo apt -y update
 sudo apt -y install git ripgrep xclip jq tldr shutter python3-pip eza
