@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo apt -y install python3-i3ipc
+sudo apt -y install sway waybar swaylock swayidle

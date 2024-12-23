@@ -55,7 +55,7 @@ output * bg /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png fil
 # resumed. It will also lock your screen before your computer goes to sleep.
 bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
 bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
-bindsym $mod+Mod1+l exec swaylock
+bindsym $mod+Mod1+l exec swaylock --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png 
 
 
 ### Input configuration
