@@ -1,12 +1,4 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
+#MOD = SUPER
 set $mod Mod4
 exec_always --no-startup-id autotiling
 # Home row direction keys, like vim
@@ -14,69 +6,40 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+#Standard apps
 set $term kitty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu exec fuzzel
-#set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
+#input options
 input * {
     xkb_layout "dk"
 }
 input "type:pointer" accel_profile flat
 
+#??
 include /etc/sway/config-vars.d/*
-gaps inner 10
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/none)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
-# Example configuration:
-#
+#Display options
+output * bg /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png fill
+gaps inner 10
+default_border pixel 4
+bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
+bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
+
+#Locksreen
 exec_always swayidle -w \
     timeout 60 'swaylock -f --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png' \
     timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
-bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
 bindsym $mod+Mod1+l exec swaylock --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png 
 
-
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-default_border pixel 4
 ### Key bindings
-#
-# Basics:
-#
-    # Start a terminal
+    #Screen/audio control
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+    bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+    bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+    bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
     bindsym $mod+Return exec $term
 
     # Kill focused window
@@ -146,9 +109,7 @@ default_border pixel 4
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
-#
+
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
@@ -210,10 +171,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
         swaybar_command waybar
 }
