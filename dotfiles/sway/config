@@ -1,6 +1,7 @@
 #MOD = SUPER
 set $mod Mod4
 exec_always --no-startup-id autotiling
+exec_always autotiling
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -29,8 +30,8 @@ bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
 
 #Locksreen
 exec_always swayidle -w \
-    timeout 60 'swaylock -f --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png' \
-    timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 300 'swaylock -f --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png' \
+    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png'
 bindsym $mod+Mod1+l exec swaylock --image /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png 
 
