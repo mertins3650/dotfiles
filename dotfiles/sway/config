@@ -21,7 +21,8 @@ include /etc/sway/config-vars.d/*
 
 #Display options
 output * bg /home/simonmertins/dev/dotfiles/backgrounds/shaded_landscape.png fill
-gaps inner 10
+gaps inner 5
+gaps outer 5
 default_border pixel 4
 bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
 bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
