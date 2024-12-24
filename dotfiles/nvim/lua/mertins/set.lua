@@ -26,8 +26,6 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.cursorline = true
-
 vim.opt.scrolloff = 10
 
 vim.api.nvim_create_autocmd("TextYankPost", {
