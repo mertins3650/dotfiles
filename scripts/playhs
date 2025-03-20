@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+exec ~/hearthstone-linux/hearthstone/Bin/Hearthstone.x86_64
+
