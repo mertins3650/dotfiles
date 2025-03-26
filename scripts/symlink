@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+# Source directory 
+DOTFILES_DIR="$HOME/dotfiles"
+# Destination directories
+CONFIG_DIR="$HOME/.config"
+LOCAL_DIR="$HOME/.local"  
+
+CONFIG_DIRS=("fuzzel" "ghostty" "hypr" "nvim" "sway" "swaync" "waybar")
+SCRIPT_DIR="scripts"
+
+# Function to handle the removal and symlink creation for .config
+process_config_directory() {
+  local dir="$1"
+  local source_path="$DOTFILES_DIR/$dir"
+  local dest_path="$CONFIG_DIR/$dir"
+
+  echo "Processing config directory: $dir"
+
+  # Check if the destination directory exists
+  if [ -d "$dest_path" ]; then
+    echo "  Removing existing directory: $dest_path"
+    if [ ! "$dry_run" ]; then
+      rm -rf "$dest_path"
+    fi
+  else
+    echo "  Directory does not exist: $dest_path"
+  fi
+
+  # Create the symlink
+  echo "  Creating symlink: $dest_path -> $source_path"
+  if [ ! "$dry_run" ]; then
+    ln -s "$source_path" "$dest_path"
+  fi
+
+  echo "  Symlink created."
+}
+
+# Function to handle the removal and symlink creation for .local
+process_local_directory() {
+  local dir="$1"
+  local source_path="$DOTFILES_DIR/$dir"
+  local dest_path="$LOCAL_DIR/$dir" 
+
+  echo "Processing local directory: $dir"
+
+  # Check if the destination directory exists
+  if [ -d "$dest_path" ]; then
+    echo "  Removing existing directory: $dest_path"
+    if [ ! "$dry_run" ]; then
+      rm -rf "$dest_path"
+    fi
+  else
+    echo "  Directory does not exist: $dest_path"
+  fi
+
+  # Create the symlink
+  echo "  Creating symlink: $dest_path -> $source_path"
+  if [ ! "$dry_run" ]; then
+    ln -s "$source_path" "$dest_path"
+  fi
+
+  echo "  Symlink created."
+}
+
+# Check for the --dry argument
+dry_run=false
+if [ "$1" == "--dry" ]; then
+  dry_run=true
+  echo "Dry run mode enabled. No changes will be made."
+fi
+
+# Create .local if it doesn't exist
+if [ ! -d "$LOCAL_DIR" ]; then
+    echo "Creating directory: $LOCAL_DIR"
+    if [ ! "$dry_run" ]; then
+        mkdir -p "$LOCAL_DIR"
+    fi
+fi
+
+# Loop through the config directories
+for dir in "${CONFIG_DIRS[@]}"; do
+  process_config_directory "$dir"
+done
+
+# Process the script directory
+process_local_directory "$SCRIPT_DIR" #changed from process_local_bin_directory
+
+echo "Script finished."
+
