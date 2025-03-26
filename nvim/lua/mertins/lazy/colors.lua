@@ -1,4 +1,5 @@
 function ColorMyPencils(color)
+	-- color = color or "rose-pine-moon"
 	color = color or "catppuccin-mocha"
 	-- color = color or "tokyonight"
 	vim.cmd.colorscheme(color)
@@ -15,9 +16,6 @@ return {
 				styles = {
 					keywords = { italic = false },
 				},
-				-- on_highlights = function(highlights)
-				-- 	highlights["@tag.tsx"] = { fg = "#82aaff" }
-				-- end,
 			})
 			ColorMyPencils()
 		end,
@@ -29,7 +27,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
-				-- transparent_background = true,
+				transparent_background = true,
 				no_italic = false,
 				styles = {
 					conditionals = {},
