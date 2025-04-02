@@ -21,10 +21,6 @@
     //"network#speed"
   ],
   "sway/workspaces": {
-    "all-outputs": true,
-    "warp-on-scroll": true,
-    "enable-bar-scroll": true,
-    "disable-scroll-wraparound": false,
     "format": " {icon} ",
     //"format-icons": {
     //  "urgent": "",
