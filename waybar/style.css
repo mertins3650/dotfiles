@@ -1,3 +1,5 @@
+@import "mocha.css";
+
 * {
   font-family: "DejaVu Sans";
   font-size: 16px;
@@ -67,19 +69,23 @@ window#waybar {
   background: #ea6962;
 }
 
-#battery.warning {
-  color: #f9c74f;
-}
-#battery.critical {
-  color: #ea6962;
+#battery {
+  color: @green;
 }
 
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
 #backlight {
-  color: #9ece6a;
+  color: @yellow;
 }
 
 #cpu {
-  color: #bb9af7;
+  color: @lavender;
 }
 
 #memory {
@@ -87,7 +93,7 @@ window#waybar {
 }
 
 #temperature {
-  color: #e0af68;
+  color: @mauve;
 }
 
 #network {
@@ -95,7 +101,11 @@ window#waybar {
 }
 
 #pulseaudio {
-  color: #7aa2f7;
+  color: @maroon;
+}
+
+#clock {
+  color: @blue;
 }
 
 .modules-left,

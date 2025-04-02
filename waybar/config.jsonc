@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  //"height": 20,
+  "height": 40,
   //"spacing": 5,
 
   "modules-left": [
@@ -32,18 +32,6 @@
     //  "default": ""
     //}
   },
-  "hyprland/workspaces": {
-    "all-outputs": true,
-    "warp-on-scroll": true,
-    "enable-bar-scroll": true,
-    "disable-scroll-wraparound": false,
-    "format": " {icon} ",
-    "format-icons": {
-      //"urgent": "",
-      //"active": "",
-      //"default": ""
-    }
-  },
  "sway/window": {
     "format": "{app_id}",
     "separate-outputs": true,
@@ -57,7 +45,7 @@
     "tooltip-format": "{app}: {title}"
   },
   "network": {
-    "format-wifi": "{icon} {essid}  {bandwidthDownBytes}",
+    "format-wifi": "{icon} {essid}",
     "format-ethernet": "󰈀",
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "],
     "format-disconnected": "󰪎",
