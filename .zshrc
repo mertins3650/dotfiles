@@ -67,7 +67,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$HOME/.local/bin:$PATH
 alias qmkenv="source ~/.venvs/qmk/bin/activate"
-alias qmkcompile="qmk compile -kb lily58/rev1 -km lily58_qmk -e CONVERT_TO=promicro_rp2040"
+alias qmkcompile="qmk compile -kb lily58 -km lily58_qmk -e CONVERT_TO=promicro_rp2040"
 
 
 # bun
