@@ -33,11 +33,10 @@ bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
 
 #Locksreen
 exec_always swayidle -w \
-    timeout 300 'hyprlock' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'hyprlock'
-
-bindsym $mod+Mod1+l exec swaylock --image $HOME/dotfiles/misc/backgrounds/shaded_landscape.png 
+    timeout 180 'swaylock -f --image $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg' \
+    timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f --image $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg'
+bindsym $mod+Mod1+l exec swaylock --image $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg
 
 ### Key bindings
 # Full screen screenshot
