@@ -73,7 +73,7 @@
   "cpu": {
     "interval": 1,
     "format": "<span font='Font Awesome 6 Free-Solid'>\uf2db</span>  {usage}%",
-    "on-click": "ghostty btop"
+    "on-click": "ghostty -e htop"
   },
   "temperature": {
     "tooltip":false,
