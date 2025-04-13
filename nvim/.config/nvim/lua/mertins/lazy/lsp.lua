@@ -79,6 +79,7 @@ return {
 				gopls = {},
 				pyright = {},
 				ts_ls = {},
+				astro = {},
 				lua_ls = {
 					settings = {
 						Lua = {
