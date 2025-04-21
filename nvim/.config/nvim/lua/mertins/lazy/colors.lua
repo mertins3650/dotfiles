@@ -6,8 +6,22 @@ end
 
 return {
 	{
+		"cdmill/neomodern.nvim",
+		name = "neomodern",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("neomodern").setup({
+				theme = "roseprime",
+			})
+			-- require("neomodern").load()
+		end,
+	},
+	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
 		config = function()
 			require("rose-pine").setup({
 				disable_background = true,
