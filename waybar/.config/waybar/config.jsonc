@@ -93,13 +93,13 @@
   },
   "memory": {
     "interval": 1,
-    "format": "<span font='Font Awesome 5 Free'>\uf538</span>  {percentage}%",
+    "format": "<span >\uf538</span>  {percentage}%",
     "on-click": "ghostty btop",
     "tooltip-format": "{used}/{total} GiB"
   },
   "pulseaudio": {
-    "format": "<span font='Font Awesome 5 Free'>{icon}</span>  {volume}",
-    "format-muted": "<span font='Font Awesome 5 Free'>\uf6a9</span>",
+    "format": "<span >{icon}</span>  {volume}",
+    "format-muted": "<span >\uf6a9</span>",
     "format-icons": {
       "headphone": "\uf025",
       "default": ["\uf028"]
