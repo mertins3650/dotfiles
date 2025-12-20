@@ -2,25 +2,19 @@
   "theme": "tokyonight",
   "$schema": "https://opencode.ai/config.json",
   "provider": {
-    "ollama": {
+    "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama (local)",
+      "name": "LMstudio (local)",
       "options": {
-        "baseURL": "http://localhost:11434/v1"
+        "baseURL": "http://localhost:1234/v1"
       },
       "models": {
-        "hf.co/unsloth/Qwen3-4B-Instruct-2507-GGUF:Q8_0": {
-          "name": "Qwen3-4B-Instruct"
+        "unsloth/qwen3-4b-instruct-2507": {
+          "name": "Qwen3-4b-instruct-2507"
         },
-        "hf.co/bartowski/Qwen2.5-Coder-14B-Instruct-GGUF:Q4_K_M": {
-          "name": "Qwen2.5-Coder-14b"
+        "unsloth/glm-4.6v-flash": {
+          "name": "GLM-4.6v-flash"
         },
-        "hf.co/unsloth/GLM-4-9B-0414-GGUF:Q4_K_M": {
-          "name": "GLM-4-9B"
-        },
-        "hf.co/bartowski/Qwen2.5-Coder-7B-Instruct-GGUF:Q8_0": {
-          "name": "Qwen2.5-Coder-7B"
-        }
       }
     }
   }

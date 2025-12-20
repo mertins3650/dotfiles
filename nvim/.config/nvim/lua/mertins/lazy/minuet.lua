@@ -34,8 +34,8 @@ return {
 					-- Consider using APPDATA instead.
 					api_key = "TERM",
 					name = "LLM",
-					end_point = "http://localhost:1234/v1/completions",
-					model = "qwen2.5-coder-1.5b-instruct",
+					end_point = "http://localhost:11434/v1/completions",
+					model = "qwen2.5-coder1.5b-autocmp",
 					-- model = "qwen2.5-coder1.5b-Q4_K_M-autocmp",
 					-- model = "hf.co/bartowski/Qwen2.5-Coder-1.5B-Instruct-GGUF:Q4_K_M",
 					optional = {

@@ -59,17 +59,16 @@ end
 -- 	},
 -- }
 return {
-	{
-		"rose-pine/nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("rose-pine").setup({
-				styles = {
-					italic = false,
-				},
-			})
-			ColorMyPencils()
-		end,
-	},
+	"rose-pine/neovim",
+	name = "rose-pine",
+	config = function()
+		require("rose-pine").setup({
+			disable_background = true,
+			styles = {
+				italic = false,
+			},
+		})
+
+		ColorMyPencils()
+	end,
 }
