@@ -1,7 +1,7 @@
 return {
 	"saghen/blink.cmp",
 	version = "*",
-	dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
+	dependencies = { "L3MON4D3/LuaSnip", version = "v2.*", "milanglacier/minuet-ai.nvim" },
 	opts = {
 		keymap = { ["<C-k>"] = nil },
 		snippets = { preset = "luasnip" },
@@ -10,7 +10,18 @@ return {
 			nerd_font_variant = "mono",
 		},
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "snippets", "buffer", "minuet" },
+			providers = {
+				minuet = {
+					name = "minuet",
+					module = "minuet.blink",
+					async = true,
+					-- Should match minuet.config.request_timeout * 1000,
+					-- since minuet.config.request_timeout is in seconds
+					timeout_ms = 3000,
+					-- score_offset = 50, -- Gives minuet higher priority among suggestions
+				},
+			},
 		},
 		completion = {
 			trigger = { prefetch_on_insert = false },
