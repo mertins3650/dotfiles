@@ -9,11 +9,8 @@
         "baseURL": "http://localhost:1234/v1"
       },
       "models": {
-        "unsloth/qwen3-4b-instruct-2507": {
-          "name": "Qwen3-4b-instruct-2507"
-        },
-        "unsloth/glm-4.6v-flash": {
-          "name": "GLM-4.6v-flash"
+        "unsloth/qwen3-coder-30b-a3b-instruct": {
+          "name": "qwen3-coder-30b-a3b"
         },
       }
     }
