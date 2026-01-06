@@ -1,4 +1,4 @@
-if [[ "$(pwd)" == $HOME/personal ]]; then
+if [[ "$(pwd)" == $HOME/Work ]]; then
     clear
     return
 fi

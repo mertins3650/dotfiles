@@ -1,25 +1,28 @@
-# Dotfiles Repository
+# Dotfiles
 
-This repository contains my personal configuration files (dotfiles) for various tools and environments.
-Each subdirectory corresponds to a different application or shell and contains the files that should be installed or symlinked into your home directory.
-
-## Directory Layout
-- `ghostty/` – Configs for the terminal multiplexer **GhostTY**.
-- `nvim/` – Neovim configuration with custom Lua plugins, key bindings and LSP settings.
-- `opencode/` – Settings for the **opencode** tool.
-- `tmux/` – tmux configuration files.
-- `tmux-sessionizer/` – Session manager for tmux.
-- `zshrc/` – Z shell configuration.
-- `readme.md` – This file.
+Personal configuration files managed with GNU Stow. Clone and symlink to your home directory.
 
 ## Installation
+
 ```bash
 git clone https://github.com/simonmichael/dotfiles.git && cd dotfiles
-# install with GNU Stow
 stow -R ghostty nvim opencode tmux tmux-sessionizer zshrc
 ```
 
-Feel free to browse the individual folders for more details or adapt them to your own setup.
+## Contents
 
-## Contributions
-If you find a better configuration, feel free to open an issue or pull request.
+| Directory | Description |
+|-----------|-------------|
+| `ghostty/` | Terminal emulator with Tokyo Night theme, JetBrains Mono font, pane resizing shortcuts, and clipboard operations |
+| `nvim/` | Neovim Lua config with LSP, Treesitter, Snacks, Harpoon, Oil, Todo-comments, Blink completion, Conform formatting, and custom snippets |
+| `tmux/` | Terminal multiplexer with Vi-mode, Tokyo Night status bar, sessionizer integration (`Ctrl+f`), and copy-mode via `wl-copy` |
+| `tmux-sessionizer/` | Custom session manager with opencode integration and configurable search paths |
+| `zshrc/` | Z shell with Oh My Zsh, mise, zoxide (`cd` replacement), fzf, eza aliases, and utilities (`iso2sd`, `format-drive`) |
+| `opencode/` | Local LLM configuration for LM Studio with qwen3-coder-30b-a3b model |
+
+## Key Features
+
+- **Terminal workflow**: Ghostty → tmux → Neovim with seamless integration
+- **Session management**: Quickly switch between projects with tmux-sessionizer
+- **Modern CLI**: zoxide for smart navigation, fzf for fuzzy finding, eza for colorful listings
+- **Neovim plugins**: Lazy loading with custom configurations for productivity
