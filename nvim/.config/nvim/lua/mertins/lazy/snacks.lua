@@ -37,13 +37,6 @@ return {
 				desc = "[N]otification History",
 			},
 			{
-				"<leader>b",
-				function()
-					Snacks.picker.buffers()
-				end,
-				desc = "[B]uffers",
-			},
-			{
 				"<leader>sb",
 				function()
 					Snacks.picker.buffers()
@@ -135,14 +128,6 @@ return {
 					Snacks.picker.grep()
 				end,
 				desc = "[G]rep",
-			},
-			{
-				"<leader>sw",
-				function()
-					Snacks.picker.grep_word()
-				end,
-				desc = "Visual selection or word",
-				mode = { "n", "x" },
 			},
 			-- search
 			{

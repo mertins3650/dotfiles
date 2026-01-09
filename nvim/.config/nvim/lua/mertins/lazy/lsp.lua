@@ -33,8 +33,11 @@ return {
 					map("K", function()
 						vim.lsp.buf.hover()
 					end, "Hover")
-					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
-					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
+					map("<leader>vrr", vim.lsp.buf.rename, "[r]ename")
+					map("<leader>ca", vim.lsp.buf.code_action, "[c]ode [a]ction", { "n", "x" })
+					map("<leader>vd", vim.diagnostic.open_float, "[d]iagnostics")
+					map("<leader>vws", vim.lsp.buf.workspace_symbol, "[w]orkspace [s]ymbol")
+					map("C-h", vim.lsp.buf.signature_help, "Signature Help", "i")
 
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 					if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then

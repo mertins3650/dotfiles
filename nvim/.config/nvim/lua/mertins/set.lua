@@ -18,7 +18,6 @@ vim.opt.breakindent = true
 
 vim.opt.undofile = true
 
-
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
@@ -41,10 +40,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.keymap.set("n", "<leader>vrn", function()
-	vim.lsp.buf.rename()
-end, { desc = "[V]im [R]ename" })
---
 -- transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -90,4 +85,3 @@ vim.api.nvim_set_hl(0, "NotifyERRORBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { bg = "none" })
-
