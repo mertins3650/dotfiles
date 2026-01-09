@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+FIRST_RUN_MODE=~/.local/state/archy/first-run.mode
+
+if [[ -f "$FIRST_RUN_MODE" ]]; then
+  rm -f "$FIRST_RUN_MODE"
+
+  bash "$HOME/archsetup/first-run/battery-monitor.sh"
+  bash "$HOME/archsetup/first-run/cleanup-reboot-sudoers.sh"
+  bash "$HOME/archsetup/first-run/firewall.sh"
+  bash "$HOME/archsetup/first-run/dns-resolver.sh"
+  bash "$HOME/archsetup/first-run/gnome-theme.sh"
+  sudo rm -f /etc/sudoers.d/first-run
+fi
