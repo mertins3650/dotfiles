@@ -13,4 +13,5 @@ if [[ -f "$FIRST_RUN_MODE" ]]; then
   bash "$HOME/archsetup/first-run/dns-resolver.sh"
   bash "$HOME/archsetup/first-run/gnome-theme.sh"
   sudo rm -f /etc/sudoers.d/first-run
+  notify-send "Initial setup complete"
 fi
