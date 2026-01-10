@@ -1,6 +1,5 @@
-@define-color foreground #e0def4;
 @define-color background #191724;
-
+@define-color foreground #e0def4;
 
 * {
   background-color: @background;
