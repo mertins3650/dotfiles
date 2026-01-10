@@ -1,0 +1,11 @@
+#!/bin/bash
+
+system=$(uname -n)
+
+if [ "$system" = "desktop" ]; then
+    source ~/archsetup/defaults/hyprland/desktop.conf
+elif [ "$system" = "laptop" ]; then
+    source ~/archsetup/defaults/hyprland/laptop.conf
+else
+    source ~/archsetup/defaults/hyprland/unknown.conf
+fi
