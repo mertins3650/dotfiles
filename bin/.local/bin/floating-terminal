@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.archy.terminal --title=Archy -e bash -c "$cmd"
+exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.archy.terminal --title=archy -e bash -c "$cmd"
