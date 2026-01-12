@@ -13,6 +13,7 @@ if [[ -f "$FIRST_RUN_MODE" ]]; then
   bash "$HOME/archsetup/first-run/gnome-theme.sh"
   floating-terminal "$HOME/archsetup/first-run/git-config.sh"
   floating-terminal "$HOME/archsetup/first-run/dns.sh"
+  floating-terminal "$HOME/archsetup/first-run/ssh.sh"
   sudo rm -f /etc/sudoers.d/first-run
   notify-send "Setup complete. Enjoy!"
 fi
