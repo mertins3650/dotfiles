@@ -2,8 +2,7 @@
 command = tmux
 
 # Dynamic theme colors
-theme = Rose Pine
-theme = Catppuccin Mocha
+config-file = ?"~/archsetup/themes/current/ghostty.conf"
 
 # Font
 font-family = "CaskaydiaMono Nerd Font"

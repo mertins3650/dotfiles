@@ -1,55 +1,26 @@
 #!/bin/bash
 
 if [[ -z $1 ]]; then
-  echo "Usage: omarchy-theme-set <theme-name>"
+  echo "Usage: set-theme <theme-name>"
   exit 1
 fi
 
-THEMES_DIR="$HOME/archsetup/themes/"
-CURRENT_THEME_PATH="$HOME/archsetup/themes/current/"
-OMARCHY_THEMES_PATH="$OMARCHY_PATH/themes"
+THEMES_PATH="$HOME/archsetup/themes/"
+CURRENT_THEME_PATH="$THEMES_PATH/current/"
 
 THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
 
-if [[ -d "$USER_THEMES_PATH/$THEME_NAME" ]]; then
-  THEME_PATH="$USER_THEMES_PATH/$THEME_NAME"
-elif [[ -d "$OMARCHY_THEMES_PATH/$THEME_NAME" ]]; then
-  THEME_PATH="$OMARCHY_THEMES_PATH/$THEME_NAME"
+if [[ -d "$THEMES_PATH/$THEME_NAME" ]]; then
+  THEME_PATH="$THEMES_PATH/$THEME_NAME"
 else
   echo "Theme '$THEME_NAME' does not exist"
   exit 1
 fi
 
-# Setup clean next theme directory (for atomic theme config swapping)
-rm -rf "$NEXT_THEME_PATH"
-mkdir -p "$NEXT_THEME_PATH"
-
-# Copy static configs
-cp -r "$THEME_PATH/"* "$NEXT_THEME_PATH/" 2>/dev/null
-
-# Generate dynamic configs
-omarchy-theme-set-templates
-
-# Swap next theme in as current
-rm -rf "$CURRENT_THEME_PATH"
-mv "$NEXT_THEME_PATH" "$CURRENT_THEME_PATH"
-
-# Store theme name for reference
-echo "$THEME_NAME" > "$HOME/.config/omarchy/current/theme.name"
-
-# Change background with theme
-omarchy-theme-bg-next
-
-# Restart components to apply new theme
-if pgrep -x waybar >/dev/null; then
-  omarchy-restart-waybar
-fi
-omarchy-restart-swayosd
-omarchy-restart-terminal
-omarchy-restart-hyprctl
-omarchy-restart-btop
-omarchy-restart-opencode
-omarchy-restart-mako
-
-# Call hook on theme set
-omarchy-hook theme-set "$THEME_NAME"
+rm -f "$CURRENT_THEME_PATH"/*
+ln -s "$THEME_PATH/background.png" "$CURRENT_THEME_PATH/background.png"
+ln -s "$THEME_PATH/hyprland/colors.conf" "$CURRENT_THEME_PATH/hyprland.conf"
+ln -s "$THEME_PATH/hyprlock/colors.conf" "$CURRENT_THEME_PATH/hyprlock.conf"
+ln -s "$THEME_PATH/ghostty/ghostty.conf" "$CURRENT_THEME_PATH/ghostty.conf"
+ln -s "$THEME_PATH/rofi/config.rasi" "$CURRENT_THEME_PATH/rofi.rasi"
+ln -s "$THEME_PATH/nvim/colors.lua" "$CURRENT_THEME_PATH/colors.lua"

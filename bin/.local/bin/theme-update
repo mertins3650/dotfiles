@@ -1,0 +1,11 @@
+#!/bin/bash
+if pgrep -x ghostty >/dev/null; then
+  killall -SIGUSR2 ghostty
+fi
+
+pkill -x swaybg
+setsid uwsm-app -- swaybg -i "$CURRENT_BACKGROUND_LINK" -m fill >/dev/null 2>&1 &
+
+hyprctl reload >/dev/null
+
+
