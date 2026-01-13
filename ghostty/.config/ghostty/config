@@ -1,5 +1,5 @@
 # Tmux
-command = tmux
+command = tmux -f ~/.config/tmux/.tmux.conf
 
 # Dynamic theme colors
 config-file = ?"~/archsetup/themes/current/ghostty.conf"
