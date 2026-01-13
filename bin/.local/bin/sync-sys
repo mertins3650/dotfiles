@@ -16,3 +16,11 @@ for dir in */; do
     stow --target="$HOME" "$dir"
 done
 popd
+
+if [[ -f "$HOME/.local/share/theme/current/theme.name" ]]; then
+  CURRENT_THEME_NAME=$(cat "$HOME/.local/share/theme/current/theme.name")
+else
+  CURRENT_THEME_NAME="catpuccin"
+fi
+
+set-theme "$CURRENT_THEME_NAME"

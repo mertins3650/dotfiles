@@ -29,4 +29,5 @@ ln -s "$THEME_PATH/ghostty/ghostty.conf" "$CURRENT_THEME_PATH/ghostty.conf"
 ln -s "$THEME_PATH/rofi/config.rasi" "$CURRENT_THEME_PATH/rofi.rasi"
 ln -s "$THEME_PATH/nvim/colors.lua" "$CURRENT_THEME_PATH/nvim.lua"
 ln -s "$THEME_PATH/tmux/tmux.conf" "$CURRENT_THEME_PATH/tmux.conf"
+ln -s "$THEME_PATH/theme.name" "$CURRENT_THEME_PATH/theme.name"
 theme-update
