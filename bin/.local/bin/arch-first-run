@@ -14,6 +14,7 @@ if [[ -f "$FIRST_RUN_MODE" ]]; then
   floating-terminal "$HOME/archsetup/first-run/git-config.sh"
   floating-terminal "$HOME/archsetup/first-run/dns.sh"
   floating-terminal "$HOME/archsetup/first-run/ssh.sh"
+  set-theme catppuccin
   sudo rm -f /etc/sudoers.d/first-run
   notify-send "Setup complete. Enjoy!"
 fi
