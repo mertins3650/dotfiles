@@ -4,7 +4,7 @@ if pgrep -x ghostty >/dev/null; then
 fi
 
 pkill -x swaybg
-setsid uwsm-app -- swaybg -i "$CURRENT_BACKGROUND_LINK" -m fill >/dev/null 2>&1 &
+setsid uwsm-app -- swaybg -i ~/archsetup/themes/current/background.png -m fill >/dev/null 2>&1 &
 
 hyprctl reload >/dev/null
 
