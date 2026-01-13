@@ -8,4 +8,4 @@ setsid uwsm-app -- swaybg -i ~/archsetup/themes/current/background.png -m fill >
 
 hyprctl reload >/dev/null
 
-
+tmux source-file ~/.tmux.conf
