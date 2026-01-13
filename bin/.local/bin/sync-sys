@@ -2,6 +2,9 @@
 
 pushd ~/archsetup/
 git pull
+mapfile -t packages < <(grep -v '^#' ~/archsetup/base.packages)
+paru -Syu --noconfirm --needed "${packages[@]}"
+
 popd
 
 pushd ~/dotfiles/
