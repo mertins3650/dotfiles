@@ -20,7 +20,7 @@ popd
 if [[ -f "$HOME/.local/share/theme/current/theme.name" ]]; then
   CURRENT_THEME_NAME=$(cat "$HOME/.local/share/theme/current/theme.name")
 else
-  CURRENT_THEME_NAME="catpuccin"
+  CURRENT_THEME_NAME="catppuccin"
 fi
 
 set-theme "$CURRENT_THEME_NAME"
