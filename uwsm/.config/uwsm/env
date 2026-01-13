@@ -1,8 +1,8 @@
 source ~/.config/uwsm/default
 
-# Activate mise if present on the system
-
 export PATH="$HOME/.local/bin:$PATH"
+ARCH_SETUP_PATH="$HOME/archsetup"
+DOTFILES_PATH="$HOME/dotfiles"
 
 if command -v mise &> /dev/null; then
  eval "$(mise activate zsh)"

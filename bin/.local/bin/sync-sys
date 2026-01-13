@@ -1,13 +1,14 @@
 #!/bin/bash
 
-pushd ~/archsetup/
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd "ARCH_SETUP_PATH"
 git pull
 mapfile -t packages < <(grep -v '^#' ~/archsetup/base.packages)
 paru -Syu --noconfirm --needed "${packages[@]}"
 
-popd
 
-pushd ~/dotfiles/
+cd "DOTFILES_PATH"
 git pull
 for dir in */; do
     [ -d "$dir" ] || continue
@@ -15,7 +16,6 @@ for dir in */; do
     echo "Stowing $dir..."
     stow --target="$HOME" "$dir"
 done
-popd
 
 if [[ -f "$HOME/.local/share/theme/current/theme.name" ]]; then
   CURRENT_THEME_NAME=$(cat "$HOME/.local/share/theme/current/theme.name")
@@ -24,3 +24,4 @@ else
 fi
 
 set-theme "$CURRENT_THEME_NAME"
+cd "$CURRENT_DIR"
