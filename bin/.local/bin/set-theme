@@ -18,7 +18,7 @@ else
 fi
 
 rm -f "$CURRENT_THEME_PATH"/*
-ln -s "$THEME_PATH/background.png" "$CURRENT_THEME_PATH/background.png"
+ln -s "$THEME_PATH/background/background.png" "$CURRENT_THEME_PATH/background.png"
 ln -s "$THEME_PATH/hyprland/colors.conf" "$CURRENT_THEME_PATH/hyprland.conf"
 ln -s "$THEME_PATH/hyprlock/colors.conf" "$CURRENT_THEME_PATH/hyprlock.conf"
 ln -s "$THEME_PATH/ghostty/ghostty.conf" "$CURRENT_THEME_PATH/ghostty.conf"
