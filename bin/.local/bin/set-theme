@@ -24,3 +24,5 @@ ln -s "$THEME_PATH/hyprlock/colors.conf" "$CURRENT_THEME_PATH/hyprlock.conf"
 ln -s "$THEME_PATH/ghostty/ghostty.conf" "$CURRENT_THEME_PATH/ghostty.conf"
 ln -s "$THEME_PATH/rofi/config.rasi" "$CURRENT_THEME_PATH/rofi.rasi"
 ln -s "$THEME_PATH/nvim/colors.lua" "$CURRENT_THEME_PATH/colors.lua"
+
+theme-update
