@@ -1,1 +1,1 @@
-/home/simonm/archsetup/themes/catppuccin/nvim/colors.lua
+/home/simonm/.local/share/theme/current/nvim.lua

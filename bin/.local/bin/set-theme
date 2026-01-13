@@ -6,7 +6,7 @@ if [[ -z $1 ]]; then
 fi
 
 THEMES_PATH="$HOME/archsetup/themes"
-CURRENT_THEME_PATH="$THEMES_PATH/current"
+CURRENT_THEME_PATH="$HOME/.local/share/theme/current"
 
 THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
 
@@ -17,6 +17,8 @@ else
   exit 1
 fi
 
+mkdir -p "$CURRENT_THEME_PATH"
+
 shopt -s dotglob
 rm -f "$CURRENT_THEME_PATH"/*
 shopt -u dotglob
@@ -25,6 +27,6 @@ ln -s "$THEME_PATH/hyprland/colors.conf" "$CURRENT_THEME_PATH/hyprland.conf"
 ln -s "$THEME_PATH/hyprlock/colors.conf" "$CURRENT_THEME_PATH/hyprlock.conf"
 ln -s "$THEME_PATH/ghostty/ghostty.conf" "$CURRENT_THEME_PATH/ghostty.conf"
 ln -s "$THEME_PATH/rofi/config.rasi" "$CURRENT_THEME_PATH/rofi.rasi"
-ln -s "$THEME_PATH/nvim/colors.lua" "$CURRENT_THEME_PATH/colors.lua"
+ln -s "$THEME_PATH/nvim/colors.lua" "$CURRENT_THEME_PATH/nvim.lua"
 ln -s "$THEME_PATH/tmux/tmux.conf" "$CURRENT_THEME_PATH/tmux.conf"
 theme-update
