@@ -1,0 +1,15 @@
+#!/bin/bash
+
+pushd ~/archsetup/
+git pull
+popd
+
+pushd ~/dotfiles/
+git pull
+for dir in */; do
+    [ -d "$dir" ] || continue
+    dir=${dir%/}
+    echo "Stowing $dir..."
+    stow --target="$HOME" "$dir"
+done
+popd
