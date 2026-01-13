@@ -3,6 +3,7 @@ command = tmux
 
 # Dynamic theme colors
 theme = Rose Pine
+theme = Catppuccin Mocha
 
 # Font
 font-family = "CaskaydiaMono Nerd Font"
