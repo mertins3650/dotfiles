@@ -1,0 +1,13 @@
+#!/bin/bash
+THEMES=()
+for theme in "$HOME/archsetup/themes/"*; do
+  THEMES+=("$(basename "$theme")")
+done
+
+# Debug: show what themes were found
+echo "Available themes: ${THEMES[@]}"
+
+# Pass the themes to gum choose
+SELECTED_THEME=$(floating-terminal gum choose "${THEMES[@]}")
+
+set-theme "$SELECTED_THEME"
