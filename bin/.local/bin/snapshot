@@ -3,7 +3,7 @@
 set -e
 
 COMMAND="$1"
-OMARCHY_PATH=${OMARCHY_PATH:-$HOME/.local/share/omarchy}
+TODAY=$(date +%Y-%m-%d)
 
 if [[ -z $COMMAND ]]; then
   echo "Usage: snapshot <create|restore>" >&2
@@ -12,11 +12,10 @@ fi
 
 case "$COMMAND" in
 create)
-  DESC="$(omarchy-version)"
+  DESC="$TODAY"
 
   echo -e "\e[32mCreate system snapshot\e[0m"
 
-  # Get existing snapper config names from CSV output
   mapfile -t CONFIGS < <(sudo snapper --csvout list-configs | awk -F, 'NR>1 {print $1}')
 
   for config in "${CONFIGS[@]}"; do
