@@ -1,8 +1,11 @@
 #!/bin/bash
+
 THEMES=()
-for theme in "$ARCHY_PATH/themes/"*; do
+for theme in "$ARCH_SETUP_PATH/themes/"*; do
   THEMES+=("$(basename "$theme")")
 done
+
+echo "$ARCHY_PATH/themes/"
 
 SELECTED_THEME=$(floating-terminal gum choose "${THEMES[@]}")
 
