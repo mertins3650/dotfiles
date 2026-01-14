@@ -1,1 +1,1 @@
-/home/simonm/.local/share/theme/current/nvim.lua
+/home/simonm/.local/share/archy/theme/nvim.lua
