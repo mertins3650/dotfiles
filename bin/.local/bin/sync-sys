@@ -2,13 +2,13 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cd "ARCH_SETUP_PATH"
+cd "$ARCH_SETUP_PATH"
 git pull
 mapfile -t packages < <(grep -v '^#' ~/archsetup/base.packages)
 paru -Syu --noconfirm --needed "${packages[@]}"
 
 
-cd "DOTFILES_PATH"
+cd "$DOTFILES_PATH"
 git pull
 for dir in */; do
     [ -d "$dir" ] || continue
