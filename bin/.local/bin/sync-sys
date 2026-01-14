@@ -18,7 +18,7 @@ for dir in */; do
 done
 
 if [[ -f "$ARCHY_PATH/theme/theme.name" ]]; then
-  CURRENT_THEME_NAME=$(cat "$/ARCHY_PATH/theme/theme.name")
+  CURRENT_THEME_NAME=$(cat "$ARCHY_PATH/theme/theme.name")
 else
   CURRENT_THEME_NAME="catppuccin"
 fi
