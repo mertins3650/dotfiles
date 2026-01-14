@@ -7,6 +7,6 @@ done
 
 echo "$ARCHY_PATH/themes/"
 
-SELECTED_THEME=$(floating-terminal gum choose "${THEMES[@]}")
+SELECTED_THEME=$(gum choose "${THEMES[@]}")
 
 set-theme "$SELECTED_THEME"
