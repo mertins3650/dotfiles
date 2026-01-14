@@ -17,8 +17,8 @@ for dir in */; do
     stow --target="$HOME" "$dir"
 done
 
-if [[ -f "$HOME/.local/share/theme/current/theme.name" ]]; then
-  CURRENT_THEME_NAME=$(cat "$HOME/.local/share/theme/current/theme.name")
+if [[ -f "$ARCHY_PATH/theme/theme.name" ]]; then
+  CURRENT_THEME_NAME=$(cat "$/ARCY_PATH/theme/theme.name")
 else
   CURRENT_THEME_NAME="catppuccin"
 fi

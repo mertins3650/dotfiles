@@ -2,7 +2,7 @@
 command = tmux -f ~/.config/tmux/.tmux.conf
 
 # Dynamic theme colors
-config-file = ?"~/.local/share/theme/current/ghostty.conf"
+config-file = ?"~/.local/share/archy/theme/ghostty.conf"
 
 # Font
 font-family = "CaskaydiaMono Nerd Font"

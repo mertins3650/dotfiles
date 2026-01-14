@@ -1,6 +1,6 @@
 #!/bin/bash
 THEMES=()
-for theme in "$HOME/archsetup/themes/"*; do
+for theme in "$ARCHY_PATH/themes/"*; do
   THEMES+=("$(basename "$theme")")
 done
 

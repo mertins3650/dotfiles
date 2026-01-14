@@ -6,7 +6,7 @@ if [[ -z $1 ]]; then
 fi
 
 THEMES_PATH="$HOME/archsetup/themes"
-CURRENT_THEME_PATH="$HOME/.local/share/theme/current"
+CURRENT_THEME_PATH="$ARCHY_PATH/theme"
 
 THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
 
