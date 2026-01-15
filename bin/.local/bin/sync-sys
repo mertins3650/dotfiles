@@ -114,6 +114,7 @@ set-theme "$CURRENT_THEME_NAME"
 # Return to original directory
 # ------------------------------------------------------------
 cd "$CURRENT_DIR"
+notify-send "Sync and update complete."
 
 
 # #!/bin/bash
