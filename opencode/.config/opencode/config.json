@@ -9,8 +9,11 @@
         "baseURL": "http://localhost:1234/v1"
       },
       "models": {
-        "unsloth/qwen3-coder-30b-a3b-instruct": {
+        "lmstudio-community/qwen3-coder-30b-a3b-instruct": {
           "name": "qwen3-coder-30b-a3b"
+        },
+        "unsloth/nemotron-3-nano-30b-a3b": {
+          "name": "nemotron-3-nano-30b-a3b"
         }
       }
     }
