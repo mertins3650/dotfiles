@@ -108,3 +108,8 @@ export PATH="$HOME/.local/scripts:$PATH"
 export PATH="$HOME/:$PATH"
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/simonm/.lmstudio/bin"
+# End of LM Studio CLI section
+
