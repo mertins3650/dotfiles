@@ -75,8 +75,8 @@ return {
 				ts_ls = {},
 				bashls = {},
 				templ = {},
+				pyright = {},
 				tailwindcss = {},
-				biome = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -97,10 +97,14 @@ return {
 				},
 			}
 
-			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, {
+			local tools = {
+				"ruff",
 				"stylua",
-			})
+				"biome",
+			}
+
+			local ensure_installed = vim.tbl_keys(servers or {})
+			vim.list_extend(ensure_installed, tools)
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("mason-lspconfig").setup({

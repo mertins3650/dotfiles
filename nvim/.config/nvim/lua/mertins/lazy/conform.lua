@@ -29,6 +29,7 @@ return {
 				}
 			end,
 			formatters_by_ft = {
+				python = { "ruff" },
 				lua = { "stylua" },
 				javascript = { "biome" },
 				typescript = { "biome" },
