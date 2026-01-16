@@ -75,6 +75,7 @@ return {
 				ts_ls = {},
 				bashls = {},
 				templ = {},
+				html = {},
 				pyright = {},
 				tailwindcss = {},
 				lua_ls = {
