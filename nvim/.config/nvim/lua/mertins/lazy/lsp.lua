@@ -73,7 +73,10 @@ return {
 			local servers = {
 				gopls = {},
 				ts_ls = {},
+				bashls = {},
 				templ = {},
+				tailwindcss = {},
+				biome = {},
 				lua_ls = {
 					settings = {
 						Lua = {

@@ -30,9 +30,9 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				typescriptreact = { "prettier" },
+				javascript = { "biome" },
+				typescript = { "biome" },
+				typescriptreact = { "biome" },
 				go = { "gofmt" },
 				html = { "prettier" },
 				astro = { "prettier" },
