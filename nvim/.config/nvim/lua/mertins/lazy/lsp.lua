@@ -102,6 +102,7 @@ return {
 				"ruff",
 				"stylua",
 				"biome",
+				"jq",
 			}
 
 			local ensure_installed = vim.tbl_keys(servers or {})

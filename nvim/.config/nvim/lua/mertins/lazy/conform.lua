@@ -37,7 +37,7 @@ return {
 				go = { "gofmt" },
 				html = { "prettier" },
 				astro = { "prettier" },
-				json = { "biome" },
+				json = { "jq" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 			},
