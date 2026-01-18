@@ -8,11 +8,19 @@
             "models": [
                 {
                     "name": "Qwen3-coder-30b-a3b",
-                    "id": "unsloth/qwen3-coder-30b-a3b-instruct"
+                    "id": "unsloth/qwen3-coder-30b-a3b-instruct",
+                    "context_window": 65000,
+                    "default_max_tokens": 20000
                 },
                 {
                     "name": "qwen3-vl-8b-instruct",
                     "id": "unsloth/qwen3-vl-8b-instruct"
+                },
+                {
+                    "name": "Nemotron 2 nano thinking",
+                    "id": "unsloth/nemotron-3-nano-30b-a3b",
+                    "context_window": 65000,
+                    "default_max_tokens": 20000
                 }
             ]
         }
@@ -23,6 +31,9 @@
             "env": {
                 "GOTOOLCHAIN": "go1.24.5"
             }
+        },
+        "lua_ls": {
+            "command": "lua-language-server"
         },
         "typescript": {
             "command": "typescript-language-server",
