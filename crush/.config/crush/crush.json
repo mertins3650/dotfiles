@@ -7,16 +7,9 @@
             "type": "openai-compat",
             "models": [
                 {
-                    "name": "GLM-4.7-flash",
-                    "id": "unsloth/glm-4.7-flash",
-                    "context_window": 65000,
-                    "default_max_tokens": 20000
-                },
-                {
                     "name": "Qwen3-coder-30b-a3b",
                     "id": "unsloth/qwen3-coder-30b-a3b-instruct",
-                    "context_window": 65000,
-                    "default_max_tokens": 20000
+                    "context_window": 65000
                 },
                 {
                     "name": "qwen3-vl-8b-instruct",
@@ -25,8 +18,7 @@
                 {
                     "name": "Nemotron 2 nano thinking",
                     "id": "unsloth/nemotron-3-nano-30b-a3b",
-                    "context_window": 65000,
-                    "default_max_tokens": 20000
+                    "context_window": 65000
                 }
             ]
         }
