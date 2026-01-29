@@ -5,8 +5,6 @@ for theme in "$ARCH_SETUP_PATH/themes/"*; do
   THEMES+=("$(basename "$theme")")
 done
 
-echo "$ARCHY_PATH/themes/"
-
 SELECTED_THEME=$(gum choose "${THEMES[@]}")
 
 set-theme "$SELECTED_THEME"
