@@ -83,7 +83,7 @@ format-drive() {
     lsblk -d -o NAME -n | awk '{print "/dev/"$1}'
   else
     echo "WARNING: This will completely erase all data on $1 and label it '$2'."
-    read -rp "Are you sure you want to continue? (y/N): " confirm
+    read "confirm?Are you sure you want to continue? (y/N): "
 
     if [[ "$confirm" =~ ^[Yy]$ ]]; then
       sudo wipefs -a "$1"
@@ -98,9 +98,12 @@ format-drive() {
       sudo mkfs.exfat -n "$2" "$partition"
 
       echo "Drive $1 formatted as exFAT and labeled '$2'."
+    else
+      echo "Aborted."
     fi
   fi
 }
+
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
