@@ -4,16 +4,13 @@
     "provider": {
         "lmstudio": {
             "npm": "@ai-sdk/openai-compatible",
-            "name": "LMstudio (local)",
+            "name": "llama.cpp",
             "options": {
-                "baseURL": "http://localhost:1234/v1"
+                "baseURL": "http://127.0.0.1:8033/v1"
             },
             "models": {
-                "unsloth/glm-4.7-flash": {
-                    "name": "glm-4.7-flash"
-                },
-                "unsloth/nemotron-3-nano-30b-a3b": {
-                    "name": "nemotron-3-nano-30b-a3b"
+                "unsloth/Qwen3.5-35B-A3B-GGUF:Q4_K_M": {
+                    "name": "Qwen3.5-35B-A3B-GGUF:Q4_K_M"
                 }
             }
         }

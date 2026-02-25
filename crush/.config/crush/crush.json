@@ -2,23 +2,13 @@
     "$schema": "https://charm.land/crush.json",
     "providers": {
         "lmstudio": {
-            "name": "LM Studio",
-            "base_url": "http://localhost:1234/v1/",
+            "name": "llama.cpp",
+            "base_url": "http://127.0.0.1:8033/v1/",
             "type": "openai-compat",
             "models": [
                 {
-                    "name": "Qwen3-coder-30b-a3b",
-                    "id": "unsloth/qwen3-coder-30b-a3b-instruct",
-                    "context_window": 65000
-                },
-                {
-                    "name": "qwen3-vl-8b-instruct",
-                    "id": "unsloth/qwen3-vl-8b-instruct"
-                },
-                {
-                    "name": "Nemotron 2 nano thinking",
-                    "id": "unsloth/nemotron-3-nano-30b-a3b",
-                    "context_window": 65000
+                    "name": "Qwen3.5-35B-A3B",
+                    "id": "unsloth/Qwen3.5-35B-A3B-GGUF:Q4_K_M"
                 }
             ]
         }
