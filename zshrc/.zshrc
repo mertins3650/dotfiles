@@ -35,6 +35,45 @@ if command -v eza &> /dev/null; then
 fi
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
+alias qwenthink='llama-server \
+  -hf unsloth/Qwen3.5-35B-A3B-GGUF:Q4_K_M \
+  -a "DrQwen" \
+  -c 131072 \
+  -ngl all \
+  -ctk q8_0 \
+  -ctv q8_0 \
+  -sm none \
+  -mg 0 \
+  -np 1 \
+  -fa on \
+  --temp 0.6 \
+  --top-p 0.95 \
+  --top-k 20 \
+  --min-p 0.0 \
+  --jinja \
+  --host 127.0.0.1 \
+  --port 8033'
+
+alias qwen='llama-server \
+  -hf unsloth/Qwen3.5-35B-A3B-GGUF:Q4_K_M \
+  -a "DrQwen" \
+  -c 131072 \
+  -ngl all \
+  -ctk q8_0 \
+  -ctv q8_0 \
+  -sm none \
+  -mg 0 \
+  -np 1 \
+  -fa on \
+  --temp 0.7 \
+  --top-p 0.8 \
+  --top-k 20 \
+  --min-p 0.0 \
+  --jinja \
+  --host 127.0.0.1 \
+  --port 8033 \
+  --chat-template-kwargs "{\"enable_thinking\": false}"'
+
 if command -v zoxide &> /dev/null; then
   alias cd="zd"
   zd() {
