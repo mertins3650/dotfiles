@@ -107,5 +107,5 @@ set-theme "$CURRENT_THEME_NAME"
 # Cleanup
 # ------------------------------------------------------------
 cd "$CURRENT_DIR"
-notify-send "Sync and update complete."
+notify-send -t 10000 "Sync and update complete."
 
