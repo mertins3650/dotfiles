@@ -23,3 +23,4 @@ vim.keymap.set("n", "<leader>lo", "<cmd>!love .<CR>", { silent = true })
 
 -- tests
 vim.keymap.set("n", "<leader>tf", "<cmd>PlenaryBustedFile %<CR>", { desc = "[T]est [F]ile" })
+
